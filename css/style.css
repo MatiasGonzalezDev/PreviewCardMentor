@@ -33,6 +33,10 @@
   
 }
 
+.card-img-mobile img {
+    display: none;
+ }
+
 .card-buy-info {
     display: flex;
     align-items: flex-start;
@@ -98,7 +102,7 @@
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-weight: 700;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     gap: 12px;
@@ -107,4 +111,53 @@
 .card-buy-btns button:hover {
     background:  hsl(158, 36%, 22%);
     cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .card-buy {
+        width: 300px; 
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+    .card-buy img {
+        display: none;
+       
+     }
+    
+    .card-img-mobile img {
+        display: inline-block;
+        width: 100%;
+
+     }
+
+    .card-buy-info h6 {
+
+        font-size: 9px;
+        
+    }
+
+    .card-buy-info {
+        gap: 14px;
+    }
+
+    .card-buy-info h1 {
+
+        font-size: 28px;
+        line-height: 28px;       
+    }
+
+    .card-buy-price span {
+        font-size: 24px;
+    }
+
+    .card-buy-info p {
+        font-size: 12px;
+        text-align: left;
+
+    }
+
+    .card-buy-btns button {
+        margin: 0 0 6px;
+    }
 }
